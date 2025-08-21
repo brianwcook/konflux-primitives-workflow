@@ -90,14 +90,31 @@ spec:
 
 ## Consumption Workflow
 
+The consumption process consists of two distinct phases:
+
+### Phase 1: Lockfile Generation (Development Time)
+
+Performed by developers/maintainers and committed to source control:
+
 ```mermaid
 graph LR
-    A[Container Build] --> B[rpm-lockfile-prototype]
-    B --> C[Reads Compose Metadata]
-    C --> D[Generates Lockfile with OCI References]
-    D --> E[Hermeto Fetches RPMs from OCI]
-    E --> F[Hermeto Runs createrepo Locally]
-    F --> G[DNF Installs from Local Repo]
+    A[Developer] --> B[Pull Compose Metadata from OCI]
+    B --> C[Run rpm-lockfile-prototype]
+    C --> D[Transform to OCI References]
+    D --> E[Commit Lockfile to Git]
+```
+
+### Phase 2: Hermetic Build Execution (CI Pipeline)
+
+Performed automatically during container builds:
+
+```mermaid
+graph LR
+    A[CI Build Starts] --> B[Read Committed Lockfile]
+    B --> C[Hermeto Fetches RPMs from OCI]
+    C --> D[Hermeto Runs createrepo Locally]
+    D --> E[DNF Installs from Local Repo]
+    E --> F[Container Build Completes]
 ```
 
 ## Key Design Decisions
