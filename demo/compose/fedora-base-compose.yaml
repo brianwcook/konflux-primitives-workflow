@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Compose
+metadata:
+  name: fedora-base
+  version: "1.0.0"
+  description: "Base Fedora system packages for container builds"
+  
+packages:
+  audit:
+    version: "4.1.1-2.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:audit-4.1.1-2.fc44"
+  bash:
+    version: "5.3.0-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:bash-5.3.0-2.fc43"
+  bzip2:
+    version: "1.0.8-21.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:bzip2-1.0.8-21.fc43"
+  coreutils:
+    version: "9.7-5.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:coreutils-9.7-5.fc43"
+  cpio:
+    version: "2.15-6.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:cpio-2.15-6.fc43"
+  crypto-policies:
+    version: "20250714-4.gitcd6043a.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:crypto-policies-20250714-4.gitcd6043a.fc44"
+  crypto-policies-scripts:
+    version: "20250714-4.gitcd6043a.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:crypto-policies-scripts-20250714-4.gitcd6043a.fc44"
+  diffutils:
+    version: "3.12-3.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:diffutils-3.12-3.fc43"
+  filesystem:
+    version: "3.18-50.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:filesystem-3.18-50.fc43"
+  findutils:
+    version: "4.10.0-6.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:findutils-4.10.0-6.fc43"
+  gawk:
+    version: "5.3.2-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:gawk-5.3.2-2.fc43"
+  glibc:
+    version: "2.42.9000-1.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:glibc-2.42.9000-1.fc44"
+  grep:
+    version: "3.12-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:grep-3.12-2.fc43"
+  gzip:
+    version: "1.14-1.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:gzip-1.14-1.fc44"
+  hostname:
+    version: "3.25-3.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:hostname-3.25-3.fc43"
+  info:
+    version: "7.2-6.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:info-7.2-6.fc43"
+  iproute:
+    version: "6.14.0-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:iproute-6.14.0-2.fc43"
+  iproute-tc:
+    version: "6.14.0-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:iproute-tc-6.14.0-2.fc43"
+  iputils:
+    version: "20250605-1.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:iputils-20250605-1.fc43"
+  irqbalance:
+    version: "1.9.4-7.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:irqbalance-1.9.4-7.fc43"
+  kbd:
+    version: "2.8.0-3.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:kbd-2.8.0-3.fc43"
+  logrotate:
+    version: "3.22.0-4.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:logrotate-3.22.0-4.fc43"
+  p11-kit:
+    version: "0.25.5-9.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:p11-kit-0.25.5-9.fc43"
+  patch:
+    version: "2.8-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:patch-2.8-2.fc43"
+
+  policycoreutils:
+    version: "3.9-4.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:policycoreutils-3.9-4.fc44"
+  procps-ng:
+    version: "4.0.4-7.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:procps-ng-4.0.4-7.fc43"
+  redhat-rpm-config:
+    version: "343-11.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:redhat-rpm-config-343-11.fc44"
+  rootfiles:
+    version: "9.0-4.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:rootfiles-9.0-4.fc43"
+  rpm:
+    version: "5.99.91-4.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:rpm-5.99.91-4.fc44"
+  rpm-plugin-audit:
+    version: "5.99.91-4.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:rpm-plugin-audit-5.99.91-4.fc44"
+  selinux-policy-targeted:
+    version: "42.5-1.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:selinux-policy-targeted-42.5-1.fc43"
+  setup:
+    version: "2.15.0-26.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:setup-2.15.0-26.fc43"
+  shadow-utils:
+    version: "4.18.0-3.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:shadow-utils-4.18.0-3.fc43"
+  tar:
+    version: "1.35-6.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:tar-1.35-6.fc43"
+  unzip:
+    version: "6.0-68.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:unzip-6.0-68.fc44"
+  util-linux:
+    version: "2.41.1-16.fc44"
+    oci_ref: "oci://quay.io/bcook/rpms:util-linux-2.41.1-16.fc44"
+  xz:
+    version: "5.8.1-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:xz-5.8.1-2.fc43"
+
+metadata:
+  location: "oci://quay.io/bcook/metadata/fedora-base:v1.0.0"
+  cache_location: "oci://quay.io/bcook/cache/fedora-base:v1.0.0"

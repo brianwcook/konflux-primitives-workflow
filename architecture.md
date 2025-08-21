@@ -224,3 +224,58 @@ The transformation logic could be integrated directly into rpm-lockfile-prototyp
 - Requiring all transitive dependencies in compose (explicit but verbose)
 - Using naming conventions to generate OCI references
 - Maintaining separate base package registry for common dependencies
+
+## Implementation Update: OCI Index Support
+
+**oras Version Upgrade**: Upgraded from v1.2.3 to v1.3.0-beta.4
+
+### New Capabilities ✅
+- **`--artifact-platform` flag**: Enables creation of true OCI Image Indexes (multi-arch manifests)
+- **Platform-aware publishing**: Can push same artifact to multiple architectures under single tag
+
+### Updated Compose File Format
+With OCI Index support, the original design is now achievable:
+
+```yaml
+# Clean single-tag approach (preferred)
+packages:
+  bash:
+    version: "5.3.0-2.fc43"
+    oci_ref: "oci://quay.io/bcook/rpms:bash-5.3.0-2.fc43"  # auto-resolves architecture
+```
+
+### Implementation Process
+The OCI Image Index creation requires a multi-step process:
+
+```bash
+# Step 1: Push each architecture to temporary tags
+oras push quay.io/bcook/rpms:bash-temp-amd64 bash.x86_64.rpm --artifact-type application/vnd.rpm
+oras push quay.io/bcook/rpms:bash-temp-arm64 bash.aarch64.rpm --artifact-type application/vnd.rpm
+
+# Step 2: Create OCI Image Index manifest
+cat > index.json << EOF
+{
+  "schemaVersion": 2,
+  "mediaType": "application/vnd.oci.image.index.v1+json",
+  "manifests": [
+    {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:...",
+      "platform": {"architecture": "amd64", "os": "linux"}
+    },
+    {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json", 
+      "digest": "sha256:...",
+      "platform": {"architecture": "arm64", "os": "linux"}
+    }
+  ]
+}
+EOF
+
+# Step 3: Push the index manifest to final tag
+oras manifest push quay.io/bcook/rpms:bash-5.3.0-2.fc43 index.json
+```
+
+**Result**: Single tag `quay.io/bcook/rpms:bash-5.3.0-2.fc43` containing OCI Image Index that automatically resolves to correct architecture when pulled with `--platform linux/amd64` or `--platform linux/arm64`.
+
+This approach removes the need for architecture-specific tag management in compose files and lockfile transformation logic.

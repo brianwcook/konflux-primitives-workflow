@@ -1,0 +1,61 @@
+contentOrigin:
+  repos:
+    - name: fedora-rawhide
+      baseurl: https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/$basearch/os/
+      gpgcheck: false
+    - name: fedora-rawhide-updates-testing
+      baseurl: https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/$basearch/os/
+      gpgcheck: false
+
+packages:
+  - audit
+  - bash
+  - bzip2
+  - coreutils
+  - cpio
+  - crypto-policies
+  - crypto-policies-scripts
+  - diffutils
+  - filesystem
+  - findutils
+  - gawk
+  - glibc
+  - grep
+  - gzip
+  - info
+  - hostname
+  - iproute
+  - iproute-tc
+  - iputils
+  - irqbalance
+  - kbd
+  - logrotate
+  - patch
+  - p11-kit
+  - passwd
+  - policycoreutils
+  - procps-ng
+  - redhat-rpm-config
+  - rootfiles
+  - rpm
+  - rpm-plugin-audit
+  - selinux-policy-targeted
+  - setup
+  - shadow-utils
+  - tar
+  - unzip
+  - util-linux
+  - xz
+
+arches:
+  - x86_64
+  - aarch64
+
+context:
+  bare: true
+
+# Allow erasing already installed packages when resolving the transaction
+allowerasing: true
+
+# Enable weak dependencies for more complete resolution
+installWeakDeps: true

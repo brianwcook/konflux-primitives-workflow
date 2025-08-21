@@ -1,0 +1,50 @@
+contentOrigin:
+  repos:
+    - name: local-prefetched
+      baseurl: file:///workspace/prefetch/repo
+      gpgcheck: false
+
+packages:
+  - audit
+  - bash
+  - bzip2
+  - coreutils
+  - cpio
+  - crypto-policies
+  - crypto-policies-scripts
+  - diffutils
+  - filesystem
+  - findutils
+  - gawk
+  - glibc
+  - grep
+  - gzip
+  - info
+  - hostname
+  - iproute
+  - iproute-tc
+  - iputils
+  - irqbalance
+  - kbd
+  - logrotate
+  - patch
+  - p11-kit
+  - policycoreutils
+  - procps-ng
+  - redhat-rpm-config
+  - rootfiles
+  - rpm
+  - rpm-plugin-audit
+  - selinux-policy-targeted
+  - setup
+  - shadow-utils
+  - tar
+  - unzip
+  - util-linux
+  - xz
+
+arches:
+  - x86_64
+  - aarch64
+
+context: bare
