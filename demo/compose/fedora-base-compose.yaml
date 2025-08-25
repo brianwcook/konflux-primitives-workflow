@@ -120,5 +120,5 @@ packages:
     oci_ref: "oci://quay.io/bcook/rpms:xz-5.8.1-2.fc43"
 
 metadata:
-  location: "oci://quay.io/bcook/metadata/fedora-base:v1.0.0"
-  cache_location: "oci://quay.io/bcook/cache/fedora-base:v1.0.0"
+  location: "oci://quay.io/bcook/rpms:fedora-base-metadata-v1.0.0"
+  cache_location: "oci://quay.io/bcook/rpms:fedora-base-cache-v1.0.0"

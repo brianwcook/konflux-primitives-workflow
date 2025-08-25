@@ -1,0 +1,444 @@
+version: '1.0'
+name: fedora-complete-compose
+description: Complete dependency-resolved Fedora RPM set as OCI artifacts
+packages:
+  add-determinism:
+    location: oci://quay.io/bcook/rpms:add-determinism-0.6.0-2.fc43.aarch64-aarch64
+  alternatives:
+    location: oci://quay.io/bcook/rpms:alternatives-1.33-2.fc43.aarch64-aarch64
+  ansible-srpm-macros:
+    location: oci://quay.io/bcook/rpms:ansible-srpm-macros-1-18.1.fc43.noarch
+  audit:
+    location: oci://quay.io/bcook/rpms:audit-4.1.1-2.fc44.aarch64-aarch64
+  audit-libs:
+    location: oci://quay.io/bcook/rpms:audit-libs-4.1.1-2.fc44.aarch64-aarch64
+  audit-rules:
+    location: oci://quay.io/bcook/rpms:audit-rules-4.1.1-2.fc44.aarch64-aarch64
+  authselect:
+    location: oci://quay.io/bcook/rpms:authselect-1.6.1-1.fc43.aarch64-aarch64
+  authselect-libs:
+    location: oci://quay.io/bcook/rpms:authselect-libs-1.6.1-1.fc43.aarch64-aarch64
+  bash:
+    location: oci://quay.io/bcook/rpms:bash-5.3.0-2.fc43.aarch64-aarch64
+  build-reproducibility-srpm-macros:
+    location: oci://quay.io/bcook/rpms:build-reproducibility-srpm-macros-0.6.0-2.fc43.noarch
+  bzip2:
+    location: oci://quay.io/bcook/rpms:bzip2-1.0.8-21.fc43.aarch64-aarch64
+  bzip2-libs:
+    location: oci://quay.io/bcook/rpms:bzip2-libs-1.0.8-21.fc43.aarch64-aarch64
+  ca-certificates:
+    location: oci://quay.io/bcook/rpms:ca-certificates-2024.2.69_v8.0.401-8.fc44.noarch
+  coreutils:
+    location: oci://quay.io/bcook/rpms:coreutils-9.7-5.fc43.aarch64-aarch64
+  coreutils-common:
+    location: oci://quay.io/bcook/rpms:coreutils-common-9.7-5.fc43.aarch64-aarch64
+  cpio:
+    location: oci://quay.io/bcook/rpms:cpio-2.15-6.fc43.aarch64-aarch64
+  cracklib:
+    location: oci://quay.io/bcook/rpms:cracklib-2.9.11-8.fc43.aarch64-aarch64
+  cracklib-dicts:
+    location: oci://quay.io/bcook/rpms:cracklib-dicts-2.9.11-8.fc43.aarch64-aarch64
+  crypto-policies:
+    location: oci://quay.io/bcook/rpms:crypto-policies-scripts-20250714-4.gitcd6043a.fc44.noarch
+  crypto-policies-scripts:
+    location: oci://quay.io/bcook/rpms:crypto-policies-scripts-20250714-4.gitcd6043a.fc44.noarch
+  cryptsetup-libs:
+    location: oci://quay.io/bcook/rpms:cryptsetup-libs-2.8.0-2.fc43.aarch64-aarch64
+  curl:
+    location: oci://quay.io/bcook/rpms:curl-8.15.0-2.fc43.aarch64-aarch64
+  cyrus-sasl-lib:
+    location: oci://quay.io/bcook/rpms:cyrus-sasl-lib-2.1.28-33.fc44.aarch64-aarch64
+  dbus:
+    location: oci://quay.io/bcook/rpms:dbus-common-1.16.0-4.fc43.noarch
+  dbus-broker:
+    location: oci://quay.io/bcook/rpms:dbus-broker-37-2.fc43.aarch64-aarch64
+  dbus-common:
+    location: oci://quay.io/bcook/rpms:dbus-common-1.16.0-4.fc43.noarch
+  device-mapper:
+    location: oci://quay.io/bcook/rpms:device-mapper-1.02.208-2.fc44.aarch64-aarch64
+  device-mapper-libs:
+    location: oci://quay.io/bcook/rpms:device-mapper-libs-1.02.208-2.fc44.aarch64-aarch64
+  diffutils:
+    location: oci://quay.io/bcook/rpms:diffutils-3.12-3.fc43.aarch64-aarch64
+  dwz:
+    location: oci://quay.io/bcook/rpms:dwz-0.16-2.fc43.aarch64-aarch64
+  ed:
+    location: oci://quay.io/bcook/rpms:ed-1.22.2-1.fc44.aarch64-aarch64
+  efi-srpm-macros:
+    location: oci://quay.io/bcook/rpms:efi-srpm-macros-6-4.fc43.noarch
+  elfutils-debuginfod-client:
+    location: oci://quay.io/bcook/rpms:elfutils-debuginfod-client-0.193-3.fc43.aarch64-aarch64
+  elfutils-default-yama-scope:
+    location: oci://quay.io/bcook/rpms:elfutils-default-yama-scope-0.193-3.fc43.noarch
+  elfutils-libelf:
+    location: oci://quay.io/bcook/rpms:elfutils-libelf-0.193-3.fc43.aarch64-aarch64
+  elfutils-libs:
+    location: oci://quay.io/bcook/rpms:elfutils-libs-0.193-3.fc43.aarch64-aarch64
+  expat:
+    location: oci://quay.io/bcook/rpms:expat-2.7.1-3.fc43.aarch64-aarch64
+  fedora-gpg-keys:
+    location: oci://quay.io/bcook/rpms:fedora-gpg-keys-44-0.1.noarch
+  fedora-release:
+    location: oci://quay.io/bcook/rpms:fedora-release-common-44-0.2.noarch
+  fedora-release-common:
+    location: oci://quay.io/bcook/rpms:fedora-release-common-44-0.2.noarch
+  fedora-release-identity-basic:
+    location: oci://quay.io/bcook/rpms:fedora-release-identity-basic-44-0.2.noarch
+  fedora-repos:
+    location: oci://quay.io/bcook/rpms:fedora-repos-rawhide-44-0.1.noarch
+  fedora-repos-rawhide:
+    location: oci://quay.io/bcook/rpms:fedora-repos-rawhide-44-0.1.noarch
+  file:
+    location: oci://quay.io/bcook/rpms:file-5.46-7.fc44.aarch64-aarch64
+  file-libs:
+    location: oci://quay.io/bcook/rpms:file-libs-5.46-7.fc44.aarch64-aarch64
+  filesystem:
+    location: oci://quay.io/bcook/rpms:filesystem-srpm-macros-3.18-50.fc43.noarch
+  filesystem-srpm-macros:
+    location: oci://quay.io/bcook/rpms:filesystem-srpm-macros-3.18-50.fc43.noarch
+  findutils:
+    location: oci://quay.io/bcook/rpms:findutils-4.10.0-6.fc43.aarch64-aarch64
+  fonts-srpm-macros:
+    location: oci://quay.io/bcook/rpms:fonts-srpm-macros-2.0.5-23.fc43.noarch
+  forge-srpm-macros:
+    location: oci://quay.io/bcook/rpms:forge-srpm-macros-0.4.0-3.fc43.noarch
+  fpc-srpm-macros:
+    location: oci://quay.io/bcook/rpms:fpc-srpm-macros-1.3-15.fc43.noarch
+  gap-srpm-macros:
+    location: oci://quay.io/bcook/rpms:gap-srpm-macros-1-1.fc44.noarch
+  gawk:
+    location: oci://quay.io/bcook/rpms:gawk-5.3.2-2.fc43.aarch64-aarch64
+  gawk-all-langpacks:
+    location: oci://quay.io/bcook/rpms:gawk-all-langpacks-5.3.2-2.fc43.aarch64-aarch64
+  gdbm:
+    location: oci://quay.io/bcook/rpms:gdbm-1.23-10.fc43.aarch64-aarch64
+  gdbm-libs:
+    location: oci://quay.io/bcook/rpms:gdbm-libs-1.23-10.fc43.aarch64-aarch64
+  ghc-srpm-macros:
+    location: oci://quay.io/bcook/rpms:ghc-srpm-macros-1.9.2-3.fc43.noarch
+  glib2:
+    location: oci://quay.io/bcook/rpms:glib2-2.85.3-2.fc44.aarch64-aarch64
+  glibc:
+    location: oci://quay.io/bcook/rpms:glibc-2.42.9000-1.fc44.aarch64-aarch64
+  glibc-common:
+    location: oci://quay.io/bcook/rpms:glibc-common-2.42.9000-1.fc44.aarch64-aarch64
+  glibc-gconv-extra:
+    location: oci://quay.io/bcook/rpms:glibc-gconv-extra-2.42.9000-1.fc44.aarch64-aarch64
+  glibc-minimal-langpack:
+    location: oci://quay.io/bcook/rpms:glibc-minimal-langpack-2.42.9000-1.fc44.aarch64-aarch64
+  gmp:
+    location: oci://quay.io/bcook/rpms:gmp-6.3.0-4.fc43.aarch64-aarch64
+  gnat-srpm-macros:
+    location: oci://quay.io/bcook/rpms:gnat-srpm-macros-6-8.fc43.noarch
+  gnutls:
+    location: oci://quay.io/bcook/rpms:gnutls-3.8.10-3.fc43.aarch64-aarch64
+  go-srpm-macros:
+    location: oci://quay.io/bcook/rpms:go-srpm-macros-3.7.0-4.fc43.noarch
+  grep:
+    location: oci://quay.io/bcook/rpms:grep-3.12-2.fc43.aarch64-aarch64
+  gzip:
+    location: oci://quay.io/bcook/rpms:gzip-1.14-1.fc44.aarch64-aarch64
+  hostname:
+    location: oci://quay.io/bcook/rpms:hostname-3.25-3.fc43.aarch64-aarch64
+  info:
+    location: oci://quay.io/bcook/rpms:info-7.2-6.fc43.aarch64-aarch64
+  initscripts-service:
+    location: oci://quay.io/bcook/rpms:initscripts-service-10.26-4.fc43.noarch
+  iproute:
+    location: oci://quay.io/bcook/rpms:iproute-6.14.0-2.fc43.aarch64-aarch64
+  iproute-tc:
+    location: oci://quay.io/bcook/rpms:iproute-tc-6.14.0-2.fc43.aarch64-aarch64
+  iptables-libs:
+    location: oci://quay.io/bcook/rpms:iptables-libs-1.8.11-11.fc43.aarch64-aarch64
+  iputils:
+    location: oci://quay.io/bcook/rpms:iputils-20250605-1.fc43.aarch64-aarch64
+  irqbalance:
+    location: oci://quay.io/bcook/rpms:irqbalance-1.9.4-7.fc43.aarch64-aarch64
+  java-srpm-macros:
+    location: oci://quay.io/bcook/rpms:java-srpm-macros-1-7.fc43.noarch
+  json-c:
+    location: oci://quay.io/bcook/rpms:json-c-0.18-7.fc43.aarch64-aarch64
+  kbd:
+    location: oci://quay.io/bcook/rpms:kbd-misc-2.8.0-3.fc43.noarch
+  kbd-legacy:
+    location: oci://quay.io/bcook/rpms:kbd-legacy-2.8.0-3.fc43.noarch
+  kbd-misc:
+    location: oci://quay.io/bcook/rpms:kbd-misc-2.8.0-3.fc43.noarch
+  kernel-srpm-macros:
+    location: oci://quay.io/bcook/rpms:kernel-srpm-macros-1.0-27.fc43.noarch
+  keyutils-libs:
+    location: oci://quay.io/bcook/rpms:keyutils-libs-1.6.3-6.fc43.aarch64-aarch64
+  kmod:
+    location: oci://quay.io/bcook/rpms:kmod-34.2-3.fc44.aarch64-aarch64
+  kmod-libs:
+    location: oci://quay.io/bcook/rpms:kmod-libs-34.2-3.fc44.aarch64-aarch64
+  krb5-libs:
+    location: oci://quay.io/bcook/rpms:krb5-libs-1.21.3-7.fc43.aarch64-aarch64
+  libacl:
+    location: oci://quay.io/bcook/rpms:libacl-2.3.2-4.fc43.aarch64-aarch64
+  libarchive:
+    location: oci://quay.io/bcook/rpms:libarchive-3.8.1-3.fc43.aarch64-aarch64
+  libatomic:
+    location: oci://quay.io/bcook/rpms:libatomic-15.2.1-1.fc43.aarch64-aarch64
+  libattr:
+    location: oci://quay.io/bcook/rpms:libattr-2.5.2-6.fc43.aarch64-aarch64
+  libblkid:
+    location: oci://quay.io/bcook/rpms:libblkid-2.41.1-16.fc44.aarch64-aarch64
+  libbpf:
+    location: oci://quay.io/bcook/rpms:libbpf-1.6.1-3.fc43.aarch64-aarch64
+  libbrotli:
+    location: oci://quay.io/bcook/rpms:libbrotli-1.1.0-9.fc44.aarch64-aarch64
+  libcap:
+    location: oci://quay.io/bcook/rpms:libcap-2.76-3.fc44.aarch64-aarch64
+  libcap-ng:
+    location: oci://quay.io/bcook/rpms:libcap-ng-0.8.5-7.fc44.aarch64-aarch64
+  libcbor:
+    location: oci://quay.io/bcook/rpms:libcbor-0.12.0-6.fc43.aarch64-aarch64
+  libcom_err:
+    location: oci://quay.io/bcook/rpms:libcom_err-1.47.3-2.fc43.aarch64-aarch64
+  libcurl:
+    location: oci://quay.io/bcook/rpms:libcurl-8.15.0-2.fc43.aarch64-aarch64
+  libeconf:
+    location: oci://quay.io/bcook/rpms:libeconf-0.7.9-2.fc43.aarch64-aarch64
+  libevent:
+    location: oci://quay.io/bcook/rpms:libevent-2.1.12-16.fc43.aarch64-aarch64
+  libfdisk:
+    location: oci://quay.io/bcook/rpms:libfdisk-2.41.1-16.fc44.aarch64-aarch64
+  libffi:
+    location: oci://quay.io/bcook/rpms:libffi-3.5.1-2.fc43.aarch64-aarch64
+  libfido2:
+    location: oci://quay.io/bcook/rpms:libfido2-1.16.0-3.fc43.aarch64-aarch64
+  libgcc:
+    location: oci://quay.io/bcook/rpms:libgcc-15.2.1-1.fc43.aarch64-aarch64
+  libidn2:
+    location: oci://quay.io/bcook/rpms:libidn2-2.3.8-2.fc43.aarch64-aarch64
+  liblastlog2:
+    location: oci://quay.io/bcook/rpms:liblastlog2-2.41.1-16.fc44.aarch64-aarch64
+  libmnl:
+    location: oci://quay.io/bcook/rpms:libmnl-1.0.5-8.fc43.aarch64-aarch64
+  libmount:
+    location: oci://quay.io/bcook/rpms:libmount-2.41.1-16.fc44.aarch64-aarch64
+  libnetfilter_conntrack:
+    location: oci://quay.io/bcook/rpms:libnetfilter_conntrack-1.0.9-9.fc43.aarch64-aarch64
+  libnfnetlink:
+    location: oci://quay.io/bcook/rpms:libnfnetlink-1.0.1-31.fc43.aarch64-aarch64
+  libnghttp2:
+    location: oci://quay.io/bcook/rpms:libnghttp2-1.66.0-2.fc43.aarch64-aarch64
+  libnsl2:
+    location: oci://quay.io/bcook/rpms:libnsl2-2.0.1-4.fc43.aarch64-aarch64
+  libpkgconf:
+    location: oci://quay.io/bcook/rpms:libpkgconf-2.3.0-3.fc43.aarch64-aarch64
+  libpsl:
+    location: oci://quay.io/bcook/rpms:libpsl-0.21.5-6.fc43.aarch64-aarch64
+  libpwquality:
+    location: oci://quay.io/bcook/rpms:libpwquality-1.4.5-14.fc43.aarch64-aarch64
+  libseccomp:
+    location: oci://quay.io/bcook/rpms:libseccomp-2.6.0-2.fc43.aarch64-aarch64
+  libselinux:
+    location: oci://quay.io/bcook/rpms:libselinux-3.9-4.fc44.aarch64-aarch64
+  libselinux-utils:
+    location: oci://quay.io/bcook/rpms:libselinux-utils-3.9-4.fc44.aarch64-aarch64
+  libsemanage:
+    location: oci://quay.io/bcook/rpms:libsemanage-3.9-3.fc44.aarch64-aarch64
+  libsepol:
+    location: oci://quay.io/bcook/rpms:libsepol-3.9-2.fc43.aarch64-aarch64
+  libsmartcols:
+    location: oci://quay.io/bcook/rpms:libsmartcols-2.41.1-16.fc44.aarch64-aarch64
+  libssh:
+    location: oci://quay.io/bcook/rpms:libssh-0.11.2-2.fc43.aarch64-aarch64
+  libssh-config:
+    location: oci://quay.io/bcook/rpms:libssh-config-0.11.2-2.fc43.noarch
+  libtasn1:
+    location: oci://quay.io/bcook/rpms:libtasn1-4.20.0-2.fc43.aarch64-aarch64
+  libtirpc:
+    location: oci://quay.io/bcook/rpms:libtirpc-1.3.6-1.rc3.fc43.3.aarch64-aarch64
+  libtool-ltdl:
+    location: oci://quay.io/bcook/rpms:libtool-ltdl-2.5.4-7.fc43.aarch64-aarch64
+  libunistring:
+    location: oci://quay.io/bcook/rpms:libunistring-1.1-10.fc43.aarch64-aarch64
+  libusb1:
+    location: oci://quay.io/bcook/rpms:libusb1-1.0.29-3.fc43.aarch64-aarch64
+  libuuid:
+    location: oci://quay.io/bcook/rpms:libuuid-2.41.1-16.fc44.aarch64-aarch64
+  libverto:
+    location: oci://quay.io/bcook/rpms:libverto-0.3.2-11.fc43.aarch64-aarch64
+  libxcrypt:
+    location: oci://quay.io/bcook/rpms:libxcrypt-4.4.38-8.fc43.aarch64-aarch64
+  libxkbcommon:
+    location: oci://quay.io/bcook/rpms:libxkbcommon-1.11.0-1.fc43.aarch64-aarch64
+  libxml2:
+    location: oci://quay.io/bcook/rpms:libxml2-2.12.10-4.fc44.aarch64-aarch64
+  libzstd:
+    location: oci://quay.io/bcook/rpms:libzstd-1.5.7-2.fc43.x86_64-x86_64
+  logrotate:
+    location: oci://quay.io/bcook/rpms:logrotate-3.22.0-4.fc43.aarch64-aarch64
+  lua-libs:
+    location: oci://quay.io/bcook/rpms:lua-libs-5.4.8-2.fc43.aarch64-aarch64
+  lua-srpm-macros:
+    location: oci://quay.io/bcook/rpms:lua-srpm-macros-1-16.fc43.noarch
+  lz4-libs:
+    location: oci://quay.io/bcook/rpms:lz4-libs-1.10.0-3.fc43.aarch64-aarch64
+  mkpasswd:
+    location: oci://quay.io/bcook/rpms:mkpasswd-5.6.4-1.fc43.aarch64-aarch64
+  mpdecimal:
+    location: oci://quay.io/bcook/rpms:mpdecimal-4.0.1-2.fc43.aarch64-aarch64
+  mpfr:
+    location: oci://quay.io/bcook/rpms:mpfr-4.2.2-2.fc43.aarch64-aarch64
+  ncurses-base:
+    location: oci://quay.io/bcook/rpms:ncurses-base-6.5-7.20250614.fc43.noarch
+  ncurses-libs:
+    location: oci://quay.io/bcook/rpms:ncurses-libs-6.5-7.20250614.fc43.aarch64-aarch64
+  nettle:
+    location: oci://quay.io/bcook/rpms:nettle-3.10.1-2.fc43.aarch64-aarch64
+  numactl-libs:
+    location: oci://quay.io/bcook/rpms:numactl-libs-2.0.19-3.fc43.aarch64-aarch64
+  ocaml-srpm-macros:
+    location: oci://quay.io/bcook/rpms:ocaml-srpm-macros-11-2.fc43.noarch
+  openblas-srpm-macros:
+    location: oci://quay.io/bcook/rpms:openblas-srpm-macros-2-20.fc43.noarch
+  openldap:
+    location: oci://quay.io/bcook/rpms:openldap-2.6.10-3.fc43.aarch64-aarch64
+  openssl-libs:
+    location: oci://quay.io/bcook/rpms:openssl-libs-3.5.1-2.fc43.aarch64-aarch64
+  p11-kit:
+    location: oci://quay.io/bcook/rpms:p11-kit-0.25.5-9.fc43.aarch64-aarch64
+  p11-kit-trust:
+    location: oci://quay.io/bcook/rpms:p11-kit-trust-0.25.5-9.fc43.aarch64-aarch64
+  package-notes-srpm-macros:
+    location: oci://quay.io/bcook/rpms:package-notes-srpm-macros-0.5-14.fc43.noarch
+  pam:
+    location: oci://quay.io/bcook/rpms:pam-1.7.1-3.fc43.aarch64-aarch64
+  pam-libs:
+    location: oci://quay.io/bcook/rpms:pam-libs-1.7.1-3.fc43.aarch64-aarch64
+  patch:
+    location: oci://quay.io/bcook/rpms:patch-2.8-2.fc43.aarch64-aarch64
+  pcre2:
+    location: oci://quay.io/bcook/rpms:pcre2-syntax-10.45-1.fc43.1.noarch
+  pcre2-syntax:
+    location: oci://quay.io/bcook/rpms:pcre2-syntax-10.45-1.fc43.1.noarch
+  perl-srpm-macros:
+    location: oci://quay.io/bcook/rpms:perl-srpm-macros-1-60.fc43.noarch
+  pkcs11-provider:
+    location: oci://quay.io/bcook/rpms:pkcs11-provider-1.0-4.fc43.aarch64-aarch64
+  pkgconf:
+    location: oci://quay.io/bcook/rpms:pkgconf-m4-2.3.0-3.fc43.noarch
+  pkgconf-m4:
+    location: oci://quay.io/bcook/rpms:pkgconf-m4-2.3.0-3.fc43.noarch
+  pkgconf-pkg-config:
+    location: oci://quay.io/bcook/rpms:pkgconf-pkg-config-2.3.0-3.fc43.aarch64-aarch64
+  policycoreutils:
+    location: oci://quay.io/bcook/rpms:policycoreutils-3.9-4.fc44.aarch64-aarch64
+  popt:
+    location: oci://quay.io/bcook/rpms:popt-1.19-9.fc43.aarch64-aarch64
+  procps-ng:
+    location: oci://quay.io/bcook/rpms:procps-ng-4.0.4-7.fc43.aarch64-aarch64
+  psmisc:
+    location: oci://quay.io/bcook/rpms:psmisc-23.7-6.fc43.aarch64-aarch64
+  publicsuffix-list-dafsa:
+    location: oci://quay.io/bcook/rpms:publicsuffix-list-dafsa-20250616-2.fc43.noarch
+  pyproject-srpm-macros:
+    location: oci://quay.io/bcook/rpms:pyproject-srpm-macros-1.18.3-2.fc43.noarch
+  python-pip-wheel:
+    location: oci://quay.io/bcook/rpms:python-pip-wheel-25.1.1-16.fc44.noarch
+  python-srpm-macros:
+    location: oci://quay.io/bcook/rpms:python-srpm-macros-3.14-5.fc43.noarch
+  qrencode-libs:
+    location: oci://quay.io/bcook/rpms:qrencode-libs-4.1.1-11.fc43.aarch64-aarch64
+  qt5-srpm-macros:
+    location: oci://quay.io/bcook/rpms:qt5-srpm-macros-5.15.17-2.fc43.noarch
+  qt6-srpm-macros:
+    location: oci://quay.io/bcook/rpms:qt6-srpm-macros-6.9.1-2.fc43.noarch
+  readline:
+    location: oci://quay.io/bcook/rpms:readline-8.3-2.fc43.aarch64-aarch64
+  redhat-rpm-config:
+    location: oci://quay.io/bcook/rpms:redhat-rpm-config-343-11.fc44.noarch
+  rootfiles:
+    location: oci://quay.io/bcook/rpms:rootfiles-9.0-4.fc43.noarch
+  rpm:
+    location: oci://quay.io/bcook/rpms:rpm-5.99.91-4.fc44.aarch64-aarch64
+  rpm-libs:
+    location: oci://quay.io/bcook/rpms:rpm-libs-5.99.91-4.fc44.aarch64-aarch64
+  rpm-plugin-audit:
+    location: oci://quay.io/bcook/rpms:rpm-plugin-audit-5.99.91-4.fc44.aarch64-aarch64
+  rpm-plugin-selinux:
+    location: oci://quay.io/bcook/rpms:rpm-plugin-selinux-5.99.91-4.fc44.aarch64-aarch64
+  rpm-sequoia:
+    location: oci://quay.io/bcook/rpms:rpm-sequoia-1.9.0-2.fc43.aarch64-aarch64
+  rust-srpm-macros:
+    location: oci://quay.io/bcook/rpms:rust-srpm-macros-26.4-1.fc44.noarch
+  sed:
+    location: oci://quay.io/bcook/rpms:sed-4.9-5.fc43.aarch64-aarch64
+  selinux-policy:
+    location: oci://quay.io/bcook/rpms:selinux-policy-targeted-42.5-1.fc43.noarch
+  selinux-policy-targeted:
+    location: oci://quay.io/bcook/rpms:selinux-policy-targeted-42.5-1.fc43.noarch
+  setup:
+    location: oci://quay.io/bcook/rpms:setup-2.15.0-26.fc43.noarch
+  shadow-utils:
+    location: oci://quay.io/bcook/rpms:shadow-utils-4.18.0-3.fc43.aarch64-aarch64
+  sqlite-libs:
+    location: oci://quay.io/bcook/rpms:sqlite-libs-3.50.2-2.fc43.aarch64-aarch64
+  systemd:
+    location: oci://quay.io/bcook/rpms:systemd-257.7-1.fc43.aarch64-aarch64
+  systemd-libs:
+    location: oci://quay.io/bcook/rpms:systemd-libs-257.7-1.fc43.aarch64-aarch64
+  systemd-networkd:
+    location: oci://quay.io/bcook/rpms:systemd-networkd-257.7-1.fc43.aarch64-aarch64
+  systemd-pam:
+    location: oci://quay.io/bcook/rpms:systemd-pam-257.7-1.fc43.aarch64-aarch64
+  systemd-resolved:
+    location: oci://quay.io/bcook/rpms:systemd-resolved-257.7-1.fc43.aarch64-aarch64
+  systemd-shared:
+    location: oci://quay.io/bcook/rpms:systemd-shared-257.7-1.fc43.aarch64-aarch64
+  systemd-sysusers:
+    location: oci://quay.io/bcook/rpms:systemd-sysusers-257.7-1.fc43.aarch64-aarch64
+  systemd-udev:
+    location: oci://quay.io/bcook/rpms:systemd-udev-257.7-1.fc43.aarch64-aarch64
+  tar:
+    location: oci://quay.io/bcook/rpms:tar-1.35-6.fc43.aarch64-aarch64
+  tpm2-tss:
+    location: oci://quay.io/bcook/rpms:tpm2-tss-4.1.3-8.fc43.aarch64-aarch64
+  tree-sitter-srpm-macros:
+    location: oci://quay.io/bcook/rpms:tree-sitter-srpm-macros-0.4.2-1.fc43.noarch
+  tzdata:
+    location: oci://quay.io/bcook/rpms:tzdata-2025b-3.fc43.noarch
+  unzip:
+    location: oci://quay.io/bcook/rpms:unzip-6.0-68.fc44.aarch64-aarch64
+  util-linux:
+    location: oci://quay.io/bcook/rpms:util-linux-2.41.1-16.fc44.aarch64-aarch64
+  util-linux-core:
+    location: oci://quay.io/bcook/rpms:util-linux-core-2.41.1-16.fc44.aarch64-aarch64
+  whois-nls:
+    location: oci://quay.io/bcook/rpms:whois-nls-5.6.4-1.fc43.noarch
+  xkeyboard-config:
+    location: oci://quay.io/bcook/rpms:xkeyboard-config-2.45-1.fc43.noarch
+  xz:
+    location: oci://quay.io/bcook/rpms:xz-5.8.1-2.fc43.aarch64-aarch64
+  xz-libs:
+    location: oci://quay.io/bcook/rpms:xz-libs-5.8.1-2.fc43.aarch64-aarch64
+  zig-srpm-macros:
+    location: oci://quay.io/bcook/rpms:zig-srpm-macros-1-5.fc43.noarch
+  zip:
+    location: oci://quay.io/bcook/rpms:zip-3.0-44.fc43.aarch64-aarch64
+  zlib-ng-compat:
+    location: oci://quay.io/bcook/rpms:zlib-ng-compat-2.2.5-1.fc43.aarch64-aarch64
+  libstdc++:
+    location: oci://quay.io/bcook/rpms:libstdc--15.2.1-1.fc43
+  python3:
+    location: oci://quay.io/bcook/rpms:python3-3.14.0-rc2-1.fc44
+  python3-libs:
+    location: oci://quay.io/bcook/rpms:python3-libs-3.14.0-rc2-1.fc44
+  python-unversioned-command:
+    location: oci://quay.io/bcook/rpms:python-unversioned-command-3.14.0-rc2-1.fc44.noarch
+metadata:
+  location: oci://quay.io/bcook/rpms:fedora-complete-metadata-v2.0.0
+  cache_location: oci://quay.io/bcook/rpms:fedora-complete-cache-v2.0.0
+generated:
+  timestamp: '2025-01-21T22:26:00'
+  total_packages: 214
+  total_rpm_artifacts: 427
+  multiarch_packages: 57
+  source: Fedora Rawhide - Complete dependency resolution with hermeto
+  lockfile: complete-deps.lockfile.yaml
+  hermeto_output: hermeto-output/deps/rpm/
+  character_sanitization: "Applied: + \u2192 -, ~ \u2192 - for OCI compliance"

@@ -1,9 +1,9 @@
 contentOrigin:
   repos:
-    - name: fedora-rawhide
+    - repoid: fedora-rawhide
       baseurl: https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/$basearch/os/
       gpgcheck: false
-    - name: fedora-rawhide-updates-testing
+    - repoid: fedora-rawhide-updates-testing
       baseurl: https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/$basearch/os/
       gpgcheck: false
 
